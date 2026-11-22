@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>BMI calculator</h1>
+    <div class="card">
+      <div class="seg">
+        <button id="metric" aria-pressed="true" type="button">Metric</button>
+        <button id="imperial" aria-pressed="false" type="button">Imperial</button>
+      </div>
+
+      <div id="metricFields">
+        <label for="cm">Height (cm)</label>
+        <input id="cm" type="number" min="0" step="any" placeholder="170">
+        <label for="kg">Weight (kg)</label>
+        <input id="kg" type="number" min="0" step="any" placeholder="65">
+      </div>
+
+      <div id="impFields" hidden>
+        <label>Height</label>
+        <div class="row">
+          <input id="ft" type="number" min="0" step="any" placeholder="ft" aria-label="Feet">
+          <input id="inch" type="number" min="0" step="any" placeholder="in" aria-label="Inches">
+        </div>
+        <label for="lb">Weight (lb)</label>
+        <input id="lb" type="number" min="0" step="any" placeholder="150">
+      </div>
+
+      <button class="go" id="calc" type="button">Calculate BMI</button>
+      <p class="err" id="err" role="alert"></p>
+
+      <div id="result" aria-live="polite">
+        <p class="value" id="bmi"></p>
+        <p class="cat" id="cat"></p>
+        <p id="note"></p>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
